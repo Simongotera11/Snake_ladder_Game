@@ -1,0 +1,478 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #03a9f4;
+    color: #fff;
+    padding: 1%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom:1px solid rgba(200, 198, 198, 0.82) ;
+    font-size: 15px;
+    display: flex;
+
+}
+.nav-text{
+    margin-right: 3%;
+    font-size: 20px;
+
+
+
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    transition: all 300ms ease
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration-color: white;
+
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #fff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 5%;
+}
+
+.left-section h2{
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 0px;
+
+}
+.left-section ul li{
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 0px;
+
+
+}
+.rooms li:hover{
+    transform: scale(1.1);
+    z-index: 100;
+    background: #25bcff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    color: #fff;
+
+}
+
+
+#addRooms, #addUsers{
+    position: relative;
+    background:#fff;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+.left-section{
+    flex: 1;
+    background-color: #f6f6f6;
+    overflow-y: auto;
+    padding-left: 0.5%;
+    border: 1px solid rgba(200, 198, 198, 0.82);
+    width: 30%;
+    overflow-x: hidden;
+    margin-top: 0.8%;
+    position: relative;
+}
+.right-section {
+    flex: 1;
+    width: 30%;
+    background-color: lightblue;
+    overflow-y: auto;
+    border: 2px solid #776e42;
+    border-radius: 10px;
+}
+#gameBoardMP{
+    width: 40%;
+    flex:2;
+    background-color: #8072c4;
+}
+#gameBoardMP.dark-mode {
+    background-color: #333;
+}
+
+#canvaMulti {
+    width: 90%;
+    height: 80%;
+    margin: 3%;
+    display: block;
+    border: 1px solid #ccc;
+}
+.right-section{
+    flex:1;
+
+}
+.footer {
+    background-color: #333;
+    text-align: center;
+    height:5%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+.footer>p{
+
+    color: #f5e9e9;
+}
+
+#roomNumberDiv{
+    width:25%;
+    height:15%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-top:1px solid rgba(200, 198, 198, 0.82) ;
+    border-bottom:1px solid rgba(200, 198, 198, 0.82) ;
+    margin-bottom: 2%;
+}
+#createRoom, #refresh{
+    width:70%;
+    height: 30px;
+
+    margin: 2%;
+    color: #fff;
+    background: #03a9f4;
+
+    font-size: 15px;
+    border:  solid ;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: 0.5s;
+
+}
+#createRoom:hover, #refresh:hover{
+    width:70%;
+    height: 30px;
+    color: #03a9f4;
+    background: #fff;
+
+    font-size: 15px;
+    border:  solid ;
+    border-radius: 20px;
+    cursor: pointer;
+
+
+    transform: scale(1.1);
+    border-color: #fff;
+
+}
+img{
+    cursor: pointer;
+}
+#send{
+    height: 80%;
+    font-size: 11px;
+    width:150%;
+
+    color: #fff;
+    background: #03a9f4;
+
+    border:  solid ;
+    border-radius: 20px;
+    border-color:#03a9f4 ;
+    cursor: pointer;
+
+    transition: 0.5s;
+
+}
+#send:hover{
+    color: #03a9f4;
+    background: #fff;
+
+    font-size: 11px;
+    border:  solid ;
+    border-radius: 27px;
+    cursor: pointer;
+
+
+    transform: scale(1.1);
+    border-color: #fff;
+
+
+}
+#chatInput{
+    width: 150%;
+    height: 100%;
+    padding: 2px;
+    margin: 2px;
+    font-size: 14px;
+    border-radius:10px;
+}
+.comVsHumaPage{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    margin-top: 7%;
+    justify-content: center;
+    align-items: center;
+
+}
+.singleDice{
+    margin-left: 10%;
+    cursor: pointer;
+    width: 60vh;
+    height: 5vh;
+    background-color: #03a9f4;
+    color:#fff ;
+    border: solid;
+    border-radius: 20px;
+    border-color: #03a9f4;
+    transition:0.5s;
+
+}
+.singleDice:hover{
+    background-color:#fff ;
+    color:#03a9f4 ;
+    border-color: #fff;
+    transform: scale(1.1);
+
+
+}
+#chatInputDiv{
+
+    height:5%;
+    padding: 0.25%;
+    position: fixed;
+    bottom:15%;
+    z-index: 1000;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
+.messageArea{
+    background-color: lightblue;
+    width: 150vh;
+    height: 60vh;
+    overflow-y: auto;
+    padding-left: 2%;
+}
+
+.messageHeader{
+    display: flex;
+    align-items: baseline;
+
+
+}
+.userName{
+    color: #25bcff;
+    font-size: large;
+}
+
+.timeStamp{
+    color: dimgrey;
+    font-size: small;
+    padding: 0.5%;
+
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eee9e9;
+}
+
+body.dark-mode nav {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .left-section {
+    background-color: #242424;
+    color: #b48d8d;
+}
+
+body.dark-mode.left-section.messageArea{
+    background-color: #242424;
+    color: #937272;
+}
+
+body.dark-mode .right-section{
+    color: #4b43a8;
+    background-color: #242424;
+}
+
+body.dark-mode nav ul li a {
+    color:#e0e0e0;
+}
+body.dark-mode .left-section ul li  {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .left-section ul li:hover, body.dark-mode .rooms li:hover {
+    background: #6150b0;
+}
+
+body.dark-mode #createRoom, body.dark-mode #createRoom:hover,body.dark-mode #refresh, body.dark-mode #refresh:hover {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+body.dark-mode #createRoom:hover,body.dark-mode #refresh:hover{
+    background:#e0e0e0;
+    color: #333;
+
+
+}
+body.dark-mode .timeStamp, body.dark-mode #messageArea, body.dark-mode #roomMessage,body.dark-mode p
+{
+    color: #e0e0e0;
+}
+body.dark-mode .userName{
+    color: #8072c4;
+}
+.userName{
+    color: #482dc4;
+}
+.timeStamp,  #messageArea,  #roomMessage, p{
+    color: #080809;
+
+}
+body.dark-mode .btn ,body.dark-mode #send,body.dark-mode #messageArea{
+    background: #333;
+    color: #e0e0e0;
+    border: solid;
+    border-radius: 20px;
+    border-color: #333;
+
+}
+body.dark-mode .btn:hover,body.dark-mode #send:hover{
+    background:#e0e0e0;
+    color: #333;
+
+}
+
+
+#joiningMessage{
+    max-height: 300px;
+    text-align:left;
+    color:green;
+    font-weight: bold;
+}
+#joiningMessage p{
+    text-align: left;
+}
+
+
+#Start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7f72bd;
+}
+
+#Start img {
+    height: 50%;
+    max-width: 45%;
+    margin: 10%;
+}
+#joinRoom {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+#joinRoom::placeholder {
+    color: #999;
+}
+
+#joinRoom:focus {
+    border-color: #007bff;
+}
+#rollTheDice{
+    padding: 10px 20px;
+    font-size: 16px;
+    width:50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-10%)
+}
+
+#rollTheDice:hover{
+    background-color: #0056b3;
+}
+
+#rollTheDice:active, #singleDice:active{
+    background-color: #0056b3;
+}
+
+#rollTheDice[disabled], #singleDice[disabled] {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}
+#diceCanvas {
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+}
+.game-legend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px; /* Adjust spacing between legend and canvas */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.player-dot {
+    background-color: blue;
+}
+
+.computer-dot {
+    background-color: black;
+}

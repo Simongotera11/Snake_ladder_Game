@@ -22,11 +22,6 @@
     - Manages connections, messages, and room memberships.
     - The backend code is improved from the assignment 2 code.
 
-## Group Members (Contribution)
-- Amandeep Singh (25%)
-- Simon Gotera Vargas (25%)
-- Josiah Jehoiakim Yap  (25%)
-- Tyler Valentini  (25%)
 
 ## Course concepts used in the projects
 
